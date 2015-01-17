@@ -1,0 +1,6 @@
+<node id = "date" date="12/11/2002">papapa</node>
+id=3&record=red&check=no&sex=male
+value1=123&value2=457.98&value5=1,2,3,4,5&value6=1,2:3,4:5&value7=waurnfe
+<ignoreCase value=yes />
+NOt correct line
+NOt correct line2
