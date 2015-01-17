@@ -1,6 +1,7 @@
 package ua.org.gostroy.diffWithRules;
 
 import ua.org.gostroy.diffWithRules.model.CompareFile;
+import ua.org.gostroy.diffWithRules.model.Line;
 import ua.org.gostroy.diffWithRules.rules.*;
 import ua.org.gostroy.diffWithRules.service.CompareLineByLine;
 
@@ -19,6 +20,11 @@ public class Main {
         CompareFile compareFile2 = new CompareFile();
         compareFile1.deserialize(new File("src/main/resources/META-INF/static/test1.txt"));
         compareFile2.deserialize(new File("src/main/resources/META-INF/static/test2.txt"));
+
+//        for(Line line : compareFile1.getLines()){
+//            System.out.println(line);
+//        }
+//        System.exit(0);
 
         Class[] classes = {ExactMatch.class, ArrayMatch.class, TwoDimArrayMatch.class, NumberMatch.class, IgnoreCaseMatch.class};
 //        Class[] classes = {ExactMatch.class, ArrayMatch.class, TwoDimArrayMatch.class, NumberMatch.class};
