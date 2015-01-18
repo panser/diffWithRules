@@ -1,6 +1,7 @@
 package ua.org.gostroy.diffWithRules.model;
 
 import ua.org.gostroy.diffWithRules.exception.ParseLineException;
+import ua.org.gostroy.diffWithRules.handler.JsonSimpleHandler;
 import ua.org.gostroy.diffWithRules.handler.PropertyArrayHandler;
 import ua.org.gostroy.diffWithRules.handler.XmlNodeHandler;
 import ua.org.gostroy.diffWithRules.model.type.NotFormatedLine;
@@ -38,6 +39,14 @@ public class CompareFile {
             // parse array of key=value
             try {
                 Line parseLine = PropertyArrayHandler.parseLine(line);
+                lines.add(parseLine);
+                continue;
+            } catch (Exception e) {
+            }
+
+            // parse simple JSON
+            try {
+                Line parseLine = JsonSimpleHandler.parseLine(line);
                 lines.add(parseLine);
                 continue;
             } catch (Exception e) {

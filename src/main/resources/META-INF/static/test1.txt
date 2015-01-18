@@ -2,5 +2,6 @@
 id=3&record=red&check=no&sex=male
 value1=123&value2=457.98&value5=1,2,3,4,5&value6=1,2:3,4:5&value7=waurnfe
 <ignoreCase value=yes />
+{"Number1":1,"First Name":"Alex","Phone Number":"+38000000001"}
 NOt correct line
 NOt correct line2

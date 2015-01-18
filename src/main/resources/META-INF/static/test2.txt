@@ -1,4 +1,5 @@
-<node id = "date" date="12/11/2002">mamamma</node>
+<node id = "date" date="12/11/2004">mamamma</node>
 id=3&record=red&check=yes
 value1=123.00&value2=457.98&value5=5,4,3,2,1&value6=5:3,4:1,2&value7=waurnfe
 <ignoreCase value=YES />
+{"Number22":1,"First Name":"Alek","Phone Number":"+38000000003"}

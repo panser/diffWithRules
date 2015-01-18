@@ -1,6 +1,7 @@
 package ua.org.gostroy.diffWithRules;
 
 import ua.org.gostroy.diffWithRules.model.CompareFile;
+import ua.org.gostroy.diffWithRules.model.Line;
 import ua.org.gostroy.diffWithRules.rules.*;
 import ua.org.gostroy.diffWithRules.service.CompareFileService;
 
