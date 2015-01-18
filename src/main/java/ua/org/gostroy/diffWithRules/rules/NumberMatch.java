@@ -9,7 +9,7 @@ import java.util.regex.Pattern;
  * Created by Panov Sergey on 1/17/2015.
  */
 @MatchRule
-public class NumberMatch {
+public class NumberMatch implements CallBackRule {
 
     public Boolean compareRule(String str1, String str2) {
         Pattern pattern = Pattern.compile("[0-9]*.?[0-9]*");

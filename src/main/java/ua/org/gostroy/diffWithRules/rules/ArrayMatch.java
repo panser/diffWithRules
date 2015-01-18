@@ -10,8 +10,9 @@ import java.util.regex.Pattern;
  * Created by Panov Sergey on 1/16/2015.
  */
 @MatchRule
-public class ArrayMatch {
+public class ArrayMatch implements CallBackRule {
 
+    @Override
     public Boolean compareRule(String str1, String str2) {
         Pattern pattern = Pattern.compile("([0-9],)*[0-9]");
         Matcher matcher1 = pattern.matcher(str1);

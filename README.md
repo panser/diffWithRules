@@ -39,14 +39,13 @@ diffWithRules
    * <b>NumberMatch</b> - сравнение вещественых чисел
    * <b>IgnoreCaseMatch</b> - сравнение игнорирую регистр
 
-Запускаемый ф-л <b>ua.org.gostroy.diffWithRules.Main</b>, в нем создаються два ф-ла(<b>CompareFile</b>), 
+В <b>ua.org.gostroy.diffWithRules.Main.main()</b> создаються два ф-ла(<b>CompareFile</b>), 
 строки (<b>Line</b>) которых сначала парсяться в определенный тип(<b>ua.org.gostroy.diffWithRules.model.type</b>) 
-и храняться в бине модели - <b>CompareFile</b>. Используя метод сервиса (<b>CompareLineByLine</b>) - equal(Line line1, Line line2), 
+и храняться в виде POJO - <b>CompareFile</b>. Используя метод сервиса (<b>CompareFileService</b>) - 
+compareLineByLine(CompareFile file1, CompareFile file2, List<CallBackRule> callBackRules), 
 который сравнивает строки из ф-ла по алгоритмы 1-1, 2-2, 3-3 (без пропусков строк) 
-используя при этом правила сравнения из пакета <b>ua.org.gostroy.diffWithRules.rules</b> мы получаем в ответ или строки равны, 
-или нет(true/false). 
-Если они не равны, то из обьекта <b>CompareLineByLine</b> мы можем получить значения уникальных св-в из первого ф-ла, 
-второго ф-ла и св-ва которые отличаються значениями. Их и выводим на выходе из м-да main
+используя при этом правила сравнения из пакета <b>ua.org.gostroy.diffWithRules.rules</b> мы получаем String,
+в котором указываеться разница в ф-лах, которую затем выводим в System.out. 
 
 Скриншоты
 ===========

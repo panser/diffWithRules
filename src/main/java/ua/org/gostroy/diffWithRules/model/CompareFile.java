@@ -3,7 +3,6 @@ package ua.org.gostroy.diffWithRules.model;
 import ua.org.gostroy.diffWithRules.exception.ParseLineException;
 import ua.org.gostroy.diffWithRules.handler.PropertyArrayHandler;
 import ua.org.gostroy.diffWithRules.handler.XmlNodeHandler;
-import ua.org.gostroy.diffWithRules.handler.XmlNodeOverDOMJHandler;
 import ua.org.gostroy.diffWithRules.model.type.NotFormatedLine;
 
 import java.io.*;
@@ -30,10 +29,10 @@ public class CompareFile {
             // parse XML
             try {
 //                Line parseLine = XmlNodeHandler.parseLine(line);
-                Line parseLine = XmlNodeOverDOMJHandler.parseLine(line);
+                Line parseLine = XmlNodeHandler.parseLine(line);
                 lines.add(parseLine);
                 continue;
-            }catch (ParseLineException e){
+            } catch (ParseLineException e) {
             }
 
             // parse array of key=value
