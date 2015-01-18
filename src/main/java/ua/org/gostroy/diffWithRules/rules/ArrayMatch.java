@@ -1,7 +1,5 @@
 package ua.org.gostroy.diffWithRules.rules;
 
-import ua.org.gostroy.diffWithRules.annotation.MatchRule;
-
 import java.util.Arrays;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -9,7 +7,6 @@ import java.util.regex.Pattern;
 /**
  * Created by Panov Sergey on 1/16/2015.
  */
-@MatchRule
 public class ArrayMatch implements CallBackRule {
 
     @Override
