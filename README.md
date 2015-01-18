@@ -22,22 +22,24 @@ diffWithRules
 1. Java 1.8
 3. Maven
 
-Для запуска прилжения выполнить <b>mvn compile exec:exec</b>
+Для запуска прилжения выполнить <code>mvn compile exec:exec</code>
 
 Подробности
 ===========
 Приложение построено согласно принцыпам ООП с делением на пакеты:
-* <b>ua.org.gostroy.diffWithRules.model.type</b> - типы строк которые парсяться из входных файлов. Сейчас поддержуеться:
-   * <b>PropertyArrayLine</b>  набор значений key1=value1&key2=value2...
-   * <b>XmlNodeLine</b>  полноценная XML-нода: одна корневая полная  root-нода
-   * <b>NotFormatedLine</b> строки, которые несмогли быть пропарсены как выше указанные типы
-* <b>ua.org.gostroy.diffWithRules.handler</b> - обработчики для выше указаных типов строк
-* <b>ua.org.gostroy.diffWithRules.rules</b> - правила согласно которым сравниваються одинововые по ключу и разные по значению св-ва
-   * <b>ExactMatch</b> - абсолютное совпадение
-   * <b>ArrayMatch</b> - сравнение как чысловых массивов
-   * <b>TwoDimArrayMatch</b> - сравнение как двумерных числовых масивов
-   * <b>NumberMatch</b> - сравнение вещественых чисел
-   * <b>IgnoreCaseMatch</b> - сравнение игнорирую регистр
+
+ * <b>ua.org.gostroy.diffWithRules.model.type</b> - типы строк которые парсяться из входных файлов. Сейчас поддержуеться:
+    * <i>PropertyArrayLine</i>  набор значений key1=value1&key2=value2...
+    * <i>XmlNodeLine</i>  полноценная XML-нода: одна корневая полная  root-нода
+    * <i>JsonSimpleLine</i>  простой JsonObject
+    * <i>NotFormatedLine</i> строки, которые несмогли быть пропарсены как выше указанные типы
+ * <b>ua.org.gostroy.diffWithRules.handler</b> - обработчики для выше указаных типов строк
+ * <b>ua.org.gostroy.diffWithRules.rules</b> - правила согласно которым сравниваються одинововые по ключу и разные по значению св-ва
+    * <i>ExactMatch</i> - абсолютное совпадение
+    * <i>ArrayMatch</i> - сравнение как чысловых массивов
+    * <i>TwoDimArrayMatch</i> - сравнение как двумерных числовых масивов
+    * <i>NumberMatch</i> - сравнение вещественых чисел
+    * <i>IgnoreCaseMatch</i> - сравнение игнорирую регистр
 
 В <b>ua.org.gostroy.diffWithRules.Main.main()</b> создаються два ф-ла(<b>CompareFile</b>), 
 строки (<b>Line</b>) которых сначала парсяться в определенный тип(<b>ua.org.gostroy.diffWithRules.model.type</b>) 
