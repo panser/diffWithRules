@@ -47,6 +47,16 @@ compareLineByLine(CompareFile file1, CompareFile file2, List<CallBackRule> callB
 используя при этом правила сравнения из пакета <b>ua.org.gostroy.diffWithRules.rules</b> мы получаем String,
 в котором указываеться разница в ф-лах, которую затем выводим в System.out. 
 
+Дополнение
+===========
+Мною в программу добавлено:
+ 
+ 1. классы **JsonSimpleLine** и **JsonSimpleHandler** для парсинга простых JSON строк, состоящих из одного JsonObject 
+ <code>
+ {"Number1":1,"First Name":"Alex","Phone Number":"+38000000001"}
+ </code>
+ 2. **IgnoreCaseMatch** - правило для сравнения значений игнорируя регистр <code>'a' == 'A'</code> 
+
 Скриншоты
 ===========
 ![/сравнение строк из 2х ф-лов](/diffWithRules.png)
